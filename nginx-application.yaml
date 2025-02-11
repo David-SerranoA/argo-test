@@ -5,7 +5,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/David-SerranoA/argo-test 
+    repoURL: https://github.com/david-serrano-realtor/argocd-poc 
     path: .
     targetRevision: main
   destination:
