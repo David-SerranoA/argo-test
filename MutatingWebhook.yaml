@@ -5,16 +5,14 @@ metadata:
 webhooks:
   - name: label-injector.example.com
     clientConfig:
-      service:
-        name: label-injector-service
-        namespace: default
-        path: /mutate
-      insecureSkipTLSVerify: true
+      # Use a direct URL with http:// instead of a 'service:' reference
+      url: "http://label-injector-service.default.svc.cluster.local:8080/mutate"
     rules:
       - apiGroups: [""]
         apiVersions: ["v1"]
         operations: ["CREATE"]
         resources: ["pods"]
+    # Keep the same objectSelector (if you want the same scoping as before)
     objectSelector:
       matchExpressions:
         - key: rollouts-pod-template-hash
