@@ -12,7 +12,6 @@ webhooks:
         namespace: default
         path: /mutate
         port: 8443
-      insecureSkipTLSVerify: true
     rules:
       - apiGroups: [""]
         apiVersions: ["v1"]
