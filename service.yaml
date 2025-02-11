@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   ports:
-    - port: 443
+    - port: 80
       targetPort: 8443
   selector:
     app: label-injector
